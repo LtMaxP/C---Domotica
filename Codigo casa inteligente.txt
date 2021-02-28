@@ -1,6 +1,3 @@
-# C---Domotica
-C贸digo proyecto de casa inteligente, con sensores de proximidad, accionares y m煤sica adaptada
-
 #include <SD.h>  
 #include <SPI.h>
 #include <TMRpcm.h>  
@@ -9,7 +6,7 @@ C贸digo proyecto de casa inteligente, con sensores de proximidad, accionares y m
 #define trigPin 7
 #define echoPin 6
 #define pinSD 10     //define el pin para seleccionar la tarjeta SD
-TMRpcm tmrpcm;   //Se crea un objeto de la librer铆a TMRpcm
+TMRpcm tmrpcm;   //Se crea un objeto de la librer韆 TMRpcm
 Servo motorServo;
 
 int cancion = 1;
@@ -21,12 +18,12 @@ int estadoBoton1 = 0;
 int servo = 3;
 int rotacion = 0;
 long duracion, distancia;
-int Limite = 20 ;  //Limite decidido para la llegada del due帽o
+int Limite = 20 ;  //Limite decidido para la llegada del due駉
 int estadoCasa = 0;
 
 void setup(){
   tmrpcm.speakerPin = 9; //Pin conectado al parlante
-  Serial.begin(9600);    //Se inicia la comunicaci贸n serial
+  Serial.begin(9600);    //Se inicia la comunicaci髇 serial
   tmrpcm.quality(1); //mejora la calidad de sonido
   tmrpcm.setVolume(5); // volumen +5 satura
   
@@ -50,7 +47,7 @@ void loop()
 {  
       
       /*
-       * Posible modificaci贸n de canci贸n  ++Siguiente canci贸n en la lista de la memoria SD
+       * Posible modificaci髇 de canci髇  ++Siguiente canci髇 en la lista de la memoria SD
       boton1 = digitalRead(2);
       Serial.println("Boton 1= " + boton1);  //Imprime algo :)
       
@@ -82,7 +79,7 @@ void loop()
           digitalWrite(4,HIGH);
           digitalWrite(8,HIGH);
            Serial.println("Canon");  /*Imprime algo */
-           tmrpcm.play("Canon.wav", 12);  //Se inicia la m煤sica deseada 3 temas insertados --- Canon - Prelude - paw
+           tmrpcm.play("Canon.wav", 12);  //Se inicia la m鷖ica deseada 3 temas insertados --- Canon - Prelude - paw
               
           delay(4000); /*Esperara 6seg a q pase*/
         }
